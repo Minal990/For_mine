@@ -15597,3 +15597,77 @@ body {
         font-size: clamp(24px, 8vw, 36px) !important;
     }
 }
+/* =========================================
+   🎂 CAKE PAGE — FINAL SCROLL FIX
+========================================= */
+
+.cake-section {
+    position: fixed !important;
+    inset: 0 !important;
+
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+
+    padding: 25px 20px 80px !important;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Content ko poora neeche tak grow hone do */
+.cake-section .cake-page-content {
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    flex-shrink: 0;
+}
+
+/* Wish message aane ke baad bhi scroll rahe */
+.cake-section .wish-message {
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+/* Back button message ke neeche rahe */
+.cake-section .inner-page-back {
+    position: relative !important;
+    z-index: 10 !important;
+    margin-bottom: 20px;
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+    .cake-section {
+        padding: 15px 12px 70px !important;
+    }
+
+    .cake-section .cake-page-content {
+        width: 94vw !important;
+        margin-bottom: 30px;
+    }
+}
+/* ===== MOBILE / WEB SCROLL FIX ===== */
+
+html,
+body {
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+body {
+    position: relative !important;
+}
+
+.birthday-inner-section,
+.birthday-page,
+.cake-section,
+#birthdayPage {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+}
